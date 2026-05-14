@@ -1,0 +1,514 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+}
+
+.page-placeholder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.page-placeholder h1 {
+  margin: 0;
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-placeholder p {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-placeholder h1 {
+    font-size: 2rem;
+  }
+
+  .page-placeholder p {
+    font-size: 1rem;
+  }
+}
+
+
+
+.mmbs-body {
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 22%),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.16), transparent 22%),
+    linear-gradient(180deg, #030712 0%, #0f172a 42%, #020617 100%);
+}
+
+.glass-panel,
+.header-glass,
+.splash-card {
+  background: rgba(10, 14, 29, 0.68);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.42);
+  backdrop-filter: blur(20px);
+}
+
+.header-glass {
+  background: rgba(3, 7, 18, 0.72);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8 0%, #8b5cf6 55%, #f472b6 100%);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.35);
+}
+
+.hero-zone {
+  background:
+    linear-gradient(135deg, rgba(14, 165, 233, 0.14), rgba(168, 85, 247, 0.1)),
+    rgba(3, 7, 18, 0.85);
+}
+
+.hero-card {
+  transform-style: preserve-3d;
+}
+
+.pill-glow {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  color: #dbeafe;
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.18);
+}
+
+.video-banner {
+  min-height: 260px;
+  background:
+    linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(236, 72, 153, 0.15)),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-banner::before,
+.video-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.video-banner::before {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.12), transparent 30%, rgba(255, 255, 255, 0.06) 50%, transparent 70%);
+  animation: shimmer 8s linear infinite;
+}
+
+.video-banner::after {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.25), transparent 22%),
+    radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.2), transparent 22%);
+}
+
+.video-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.hero-title,
+.display-3,
+.display-6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  letter-spacing: -0.03em;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.letter-space {
+  letter-spacing: 0.18em;
+}
+
+.stacked-features {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.stacked-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.instagram-tile {
+  aspect-ratio: 1;
+  border-radius: 0.9rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(236, 72, 153, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.review-card,
+.mini-product-card,
+.fit-upload-box,
+.info-chip,
+.fit-chip,
+.history-item,
+.feed-item,
+.admin-row,
+.cart-row {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.52);
+}
+
+.review-card {
+  min-height: 100%;
+}
+
+.product-card,
+.mini-product-card {
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.product-card:hover,
+.mini-product-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 22px 48px rgba(2, 6, 23, 0.45);
+}
+
+.product-media {
+  position: relative;
+  height: 240px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-media-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.15), rgba(2, 6, 23, 0.68));
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery-tile {
+  aspect-ratio: 1.06;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: float 6s ease-in-out infinite;
+}
+
+.palette-chip {
+  display: inline-flex;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.info-chip,
+.fit-chip {
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.bargain-panel,
+.review-strip {
+  border-radius: 1.2rem;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bargain-chat {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.bargain-chat.popup {
+  max-height: 240px;
+  overflow: auto;
+}
+
+.chat-bubble {
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: float 5s ease-in-out infinite;
+}
+
+.chat-bubble.system {
+  box-shadow: 0 0 28px rgba(56, 189, 248, 0.12);
+}
+
+.chat-bubble.accepted {
+  background: rgba(34, 197, 94, 0.16);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.chat-bubble.counter {
+  background: rgba(251, 191, 36, 0.14);
+  border-color: rgba(251, 191, 36, 0.32);
+}
+
+.chat-bubble.rejected {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.28);
+}
+
+.history-list,
+.admin-feed {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.history-item,
+.feed-item,
+.admin-row,
+.cart-row {
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+}
+
+.admin-table {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-input {
+  width: 7rem;
+}
+
+.mini-bars {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+  min-height: 180px;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-bar {
+  flex: 1;
+  border-radius: 1rem 1rem 0.35rem 0.35rem;
+  background: linear-gradient(180deg, #38bdf8, #8b5cf6);
+  box-shadow: 0 0 26px rgba(56, 189, 248, 0.28);
+}
+
+.fit-upload-box {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.tryon-canvas-wrap,
+.lux-canvas-wrap {
+  height: 340px;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), rgba(2, 6, 23, 0.82));
+}
+
+.avatar-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25d366, #10b981);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  animation: pulseGlow 2.4s infinite;
+}
+
+.whatsapp-float:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.cursor-glow {
+  position: fixed;
+  z-index: 0;
+  width: 220px;
+  height: 220px;
+  margin-left: -110px;
+  margin-top: -110px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.02) 60%, transparent 70%);
+  filter: blur(8px);
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.14), rgba(2, 6, 23, 0.96));
+}
+
+.splash-card {
+  width: min(92vw, 420px);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.splash-progress {
+  height: 0.8rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.modal-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+
+.modal-card {
+  width: min(100%, 900px);
+}
+
+.active-link {
+  background: rgba(56, 189, 248, 0.12);
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  70% { box-shadow: 0 0 0 18px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(30%); }
+}
+
+@media (max-width: 991px) {
+  .grid-two,
+  .instagram-grid,
+  .product-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tryon-canvas-wrap,
+  .lux-canvas-wrap {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-two,
+  .instagram-grid,
+  .product-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    padding: 1rem !important;
+  }
+
+  .whatsapp-float span {
+    display: none;
+  }
+}

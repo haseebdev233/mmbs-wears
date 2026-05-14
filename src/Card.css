@@ -1,0 +1,70 @@
+/* Card Component Styles */
+
+.card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(10, 14, 39, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.card-default {
+  background: rgba(10, 14, 39, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.card-elevated {
+  background: rgba(26, 31, 58, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.card-flat {
+  background: rgba(10, 14, 39, 0.5);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* Glow Variant */
+.card-glow {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), inset 0 0 20px rgba(0, 212, 255, 0.05);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), inset 0 0 30px rgba(0, 212, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* Image in Card */
+.card img {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+/* Card Description */
+.card-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}

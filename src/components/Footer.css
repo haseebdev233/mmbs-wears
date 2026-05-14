@@ -1,0 +1,396 @@
+/* ================================
+   MMB's Wears Premium Footer UI
+================================ */
+
+.footer {
+  position: relative;
+  overflow-x: hidden;
+  background: #070b22;
+  color: white;
+}
+
+/* ================================
+   Background Effects
+================================ */
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.8) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 300px;
+  background: #00d4ff;
+  opacity: 0.04;
+  filter: blur(90px);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+/* ================================
+   Container
+================================ */
+
+.footer-container {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+  padding: 70px 24px;
+}
+
+/* ================================
+   Stats Section
+================================ */
+
+.footer-stats {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 35px 24px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d4ff;
+  font-size: 20px;
+}
+
+.footer-stat-item h4 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.footer-stat-item p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+/* ================================
+   Main Footer Grid
+================================ */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 50px;
+}
+
+/* ================================
+   Brand
+================================ */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.footer-logo-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00d4ff, #ffc107);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #071122;
+  font-size: 20px;
+  font-weight: 900;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
+  transition: 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.6);
+}
+
+.footer-brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-brand-subtitle {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-description {
+  max-width: 420px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* ================================
+   Newsletter
+================================ */
+
+.footer-newsletter {
+  margin-top: 28px;
+}
+
+.footer-newsletter-title {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-newsletter-box {
+  display: flex;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.footer-newsletter-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 14px 16px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.footer-newsletter-box input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-newsletter-box button {
+  border: none;
+  background: #00d4ff;
+  color: #071122;
+  font-weight: 700;
+  padding: 0 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-newsletter-box button:hover {
+  background: #25ddff;
+}
+
+/* ================================
+   Socials
+================================ */
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.35);
+  background: rgba(0, 212, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Footer Columns
+================================ */
+
+.footer-column-title {
+  margin-bottom: 22px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+/* ================================
+   Contact Row
+================================ */
+
+.footer-contact {
+  margin-top: 70px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.45);
+  transition: 0.3s ease;
+}
+
+.footer-contact-item:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-contact-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #00d4ff;
+}
+
+/* ================================
+   Bottom Bar
+================================ */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 22px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-heart {
+  color: #ff6b6b;
+}
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 992px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-newsletter-box {
+    flex-direction: column;
+  }
+
+  .footer-newsletter-box button {
+    padding: 14px;
+  }
+}
